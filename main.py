@@ -211,6 +211,7 @@ def train_evaluate_model(model, X_train, y_train, X_test, y_test):
 
         predictions_prob = best_model.predict(X_test, verbose=0)
         predictions = (predictions_prob > 0.4).astype(int).reshape(-1)
+        best_model.save("tuned_nn_model.keras")
         os.remove("best_nn_model.keras")
     else:
         model.fit(X_train, y_train)
@@ -304,4 +305,4 @@ if __name__ == "__main__":
 
     X_train, X_test, y_train, y_test = prepare_data(df)
 
-    compute_mean_evaluations(models, X_train, y_train, X_test, y_test, n_runs = 10)
+    compute_mean_evaluations(models, X_train, y_train, X_test, y_test, n_runs = 1)
