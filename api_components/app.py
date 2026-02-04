@@ -2,10 +2,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 import joblib
-
+from keras.models import load_model
 app = FastAPI()
 
-model = joblib.load("tuned_nn_model.joblib")
+model = load_model("tuned_nn_model.keras")
 scaler = joblib.load("scaler.joblib")
 features = joblib.load("features.joblib")
 
