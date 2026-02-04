@@ -5,7 +5,7 @@ import joblib
 from keras.models import load_model
 app = FastAPI()
 
-model = load_model("tuned_nn_model.keras")
+model = joblib.load("model.joblib")
 scaler = joblib.load("scaler.joblib")
 features = joblib.load("features.joblib")
 
