@@ -194,7 +194,7 @@ Rezultaty z działania tunera okazały się znaczące, architektura otrzymana w 
 model paper_NN jest nieznacznie gorszy niż ten uzyskany przeze mnie natomiast pierwotny prosty model zostaje daleko w tyl,\
 nadal jednak regresja logistyczna radzi sobie najlepiej w balanced accuracy, choć ma gorszy recall 
 
-## Następnie postanowiłem zastosować feature extraction, odcinając część kolumn z datasetu które miały znikomą bądź negatywną korelację z diagnozą. Wartości korelacji obliczone zostały za pomocą współczynnika korelacji Pearsona używajać funkcji Dataframe.corr()
+## Następnie postanowiłem zastosować feature extraction, odcinając część kolumn z datasetu które miały znikomą korelację z diagnozą. Wartości korelacji obliczone zostały za pomocą współczynnika korelacji Pearsona używajać funkcji Dataframe.corr()
 
 ![feature_extraction.png](images%2Ffeature_extraction.png)
 
